@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Col, Container, Image, Row, Table } from 'react-bootstrap';
+import { Button, Container, Image, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteFromCart , clear ,increaseQty,decreaseQty} from '../rtk/slices/cart-slice';
 

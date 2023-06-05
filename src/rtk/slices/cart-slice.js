@@ -36,14 +36,14 @@ const cartSlice = createSlice({
             }
         },
         increaseQty : (state , action) => {
-            const finded = state.find(product => product.id == action.payload)
+            const finded = state.find(product => product.id === action.payload)
             const index = state.indexOf(finded)
             state[index].qty +=1;
             state[index].tPrice = state[index].price * state[index].qty;
             return state
         },
         decreaseQty : (state , action) => {
-            const finded = state.find(product => product.id == action.payload)
+            const finded = state.find(product => product.id === action.payload)
             const index = state.indexOf(finded)
             if(state[index].qty > 0){
                 state[index].qty -=1;
@@ -56,7 +56,7 @@ const cartSlice = createSlice({
         },
         deleteFromCart: (state,action) => {
             console.log(action.payload);
-             return state.filter(item => item.id != action.payload)
+             return state.filter(item => item.id !== action.payload)
         },
         clear: (state,action) => {
             return []

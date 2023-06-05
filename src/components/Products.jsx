@@ -7,12 +7,11 @@ import { fetchProducts } from '../rtk/slices/products-slice'
 function Products() {
 
   const dispatch = useDispatch()
-  const state = useSelector(state => state)
   const Products = useSelector(state => state.Products)
   
   useEffect(()=>{
     dispatch(fetchProducts())
-  },[])
+  })
   // console.log(state);
   // console.log(Products);
   return (
